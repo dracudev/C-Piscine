@@ -5,26 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 13:33:12 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/07 13:50:49 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/07 14:05:12 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/07 14:30:12 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // Un factorial es el múltiplo de todos sus anteriores (3! = 3 * 2 * 1)
 // fact! = nb * (nb - 1)!
-// fact! = nb-- * fact! 
+// fact! = nb * ft_recursive_factorial(nb - 1)
 
-int ft_iterative_factorial(int nb)
+int ft_recursive_factorial(int nb)
 {
-    int fact;
-    
-    fact = 1;
     if (nb < 0)
-        return 0;
-    while (nb > 1)
-    {
-        fact = nb * fact;
-        nb--;
-    }
-    return (fact);
+        return (0);
+    else if (nb == 0)
+        return (1);
+    else
+        return (nb * ft_recursive_factorial(nb - 1));
 }
