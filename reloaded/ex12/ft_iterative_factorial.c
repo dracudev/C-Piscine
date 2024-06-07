@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antandre <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: antandre <antandre@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 13:33:12 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/06 13:36:49 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/06 14:02:47 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/06 14:18:34 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_iterative_factorial(int nb)
-{}
+{
+
+}

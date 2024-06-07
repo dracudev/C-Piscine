@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 13:56:03 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/06 14:17:47 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/06 14:07:40 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/06 14:09:18 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-}
+	int	i;
 
-void	ft_print_numbers(void)
-{
-	char	i;
-
-	i = '0';
-	while (i <= '9')
-	{
-		ft_putchar(i);
+	i = 0;
+	while (str[i])
 		i++;
-	}
+	return (i);
 }

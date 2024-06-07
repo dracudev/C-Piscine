@@ -6,7 +6,7 @@
 /*   By: antandre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 13:37:17 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/06 13:43:38 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/06 15:20:38 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i])
 	{
-		ft_putchar(&str[i]);
+		ft_putchar(str[i]);
 		i++;
 	}
 }
@@ -33,10 +33,14 @@ int	main(int argc, char **argv)
 {
 	int	i;
 
-
 	if (argc > 1)
 	{
-		i = 0;
-		while (argv
+		i = 1;
+		while (argv[i])
+		{
+			ft_putstr(argv[i]);
+			ft_putchar('\n');
+			i++;
+		}
 	}
 }

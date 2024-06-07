@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 13:56:03 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/06 14:17:47 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/06 14:10:02 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/06 14:13:39 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	write(1, &c, 1);
-}
+	int	i;
 
-void	ft_print_numbers(void)
-{
-	char	i;
-
-	i = '0';
-	while (i <= '9')
-	{
-		ft_putchar(i);
+	i = 0;
+	while (s1[i] && s1[i] == s2[i])
 		i++;
-	}
+	return (s1[i] - s2[i]);
 }
