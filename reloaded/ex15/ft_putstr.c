@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 13:56:03 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/06 14:17:47 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/06 14:03:42 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/06 14:06:26 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_numbers(void)
+void	ft_putstr(char *str)
 {
-	char	i;
+	int	i;
 
-	i = '0';
-	while (i <= '9')
+	i = 0;
+	while (str[i])
 	{
-		ft_putchar(i);
+		ft_putchar(str[i]);
 		i++;
 	}
 }
