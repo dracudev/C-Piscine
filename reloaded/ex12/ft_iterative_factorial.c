@@ -1,30 +1,30 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 13:33:12 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/08 13:30:40 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/10 11:33:06 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/10 11:35:14 by antandre         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 // Un factorial es el múltiplo de todos sus anteriores (3! = 3 * 2 * 1)
 // fact! = nb * (nb - 1)!
 // fact! = nb-- * fact! 
 
-int ft_iterative_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
-    int fact;
-    
-    fact = 1;
-    if (nb < 0)
-        return 0;
-    while (nb > 1)
-    {
-        fact = nb * fact;
-        nb--;
-    }
-    return (fact);
+	int	fact;
+
+	fact = 1;
+	if (nb < 0)
+		return (0);
+	while (nb > 1)
+	{
+		fact = nb * fact;
+		nb--;
+	}
+	return (fact);
 }
