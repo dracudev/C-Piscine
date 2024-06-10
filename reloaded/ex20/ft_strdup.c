@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:49:45 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/10 15:09:39 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/10 15:50:43 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	ft_strlen(char *s1)
 
 char	*ft_strdup(char *src)
 {
-	char *dup;
-	int	i;
+	char	*dup;
+	int		i;
 
 	dup = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (dup == NULL)
@@ -38,13 +38,4 @@ char	*ft_strdup(char *src)
 	}
 	dup[i] = '\0';
 	return (dup);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char *s1 = "Hello, world";
-
-	printf("%s", ft_strdup(s1));
 }
