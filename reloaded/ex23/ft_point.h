@@ -1,14 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 09:41:56 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/11 12:13:39 by antandre         ###   ########.fr       */
+/*   Created: 2024/06/11 10:23:01 by antandre          #+#    #+#             */
+/*   Updated: 2024/06/11 12:39:18 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#define ABS(value) (abs(value))
+#ifndef FT_POINT_H
+# define FT_POINT_H
+
+typedef struct t_point
+{
+	int	x;
+	int	y;
+}	t_point;
+
+#endif

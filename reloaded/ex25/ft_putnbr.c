@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 11:33:06 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/11 12:50:14 by antandre         ###   ########.fr       */
+/*   Created: 2024/03/28 15:40:53 by antandre          #+#    #+#             */
+/*   Updated: 2024/04/02 15:10:56 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Un factorial es el múltiplo de todos sus anteriores (3! = 3 * 2 * 1)
-// fact! = nb * (nb - 1)!
-// fact! = nb-- * fact! 
+#include <unistd.h>
 
-int	ft_iterative_factorial(int nb)
+void	ft_putchar(char c)
 {
-	int	fact;
+	write (1, &c, 1);
+}
 
-	fact = 1;
-	if (nb < 0)
-		return (0);
-	else if (nb <= 1)
-		return (fact);
-	while (nb > 0)
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		fact = nb * fact;
-		nb--;
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
 	}
-	return (fact);
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		ft_putchar(nb + '0');
+	}
 }
