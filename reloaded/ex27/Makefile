@@ -6,13 +6,13 @@
 #    By: antandre <antandre@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 15:03:30 by antandre          #+#    #+#              #
-#    Updated: 2024/06/13 11:37:34 by antandre         ###   ########.fr        #
+#    Updated: 2024/06/11 15:08:02 by antandre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ./srcs/%.c
-HEADER = ./includes/%.h
+SRC = ./srcs/
+HEADER = ./includes/*.h
 FLAGS = -Wall -Wextra -Werror
 OPTION = -c $(HEADER)
 FILES = $(SRC)ft_putchar.c $(SRC)ft_putstr.c $(SRC)ft_strcmp.c $(SRC)ft_strlen.c $(SRC)ft_swap.c
