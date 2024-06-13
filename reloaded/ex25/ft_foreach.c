@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:20:09 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/12 12:29:50 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/13 18:24:13 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,4 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 		(f)(tab[i]);
 		i++;
 	}
-}	
+}

@@ -1,32 +1,20 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: antandre <antandre@student.42barcelon      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/11 15:03:30 by antandre          #+#    #+#              #
-#    Updated: 2024/06/11 15:08:02 by antandre         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-NAME = libft.a
-SRC = ./srcs/
-HEADER = ./includes/*.h
+NAME = ft_display_file
+SRC = ft_display_file.c
+OBJ = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror
-OPTION = -c $(HEADER)
-FILES = $(SRC)ft_putchar.c $(SRC)ft_putstr.c $(SRC)ft_strcmp.c $(SRC)ft_strlen.c $(SRC)ft_swap.c
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLAGS) $(OPTION) $(FILES) $(HEADER)
-	ar rc $(NAME) *.o
+$(NAME): $(OBJ)
+	gcc $(FLAGS) -o $(NAME) $(OBJ)
+
+%.o: %.c
+	gcc $(FLAGS) -c $< -o $@
 
 clean:
-	/bin/rm -f *.o
+	rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

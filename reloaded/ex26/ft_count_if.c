@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:31:06 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/12 15:14:33 by antandre         ###   ########.fr       */
+/*   Updated: 2024/06/13 18:26:13 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_count_if(char **tab, int (*f)(char*))
 	int	i;
 	int	count;
 	int	aux;
-	
+
 	i = 0;
 	aux = 0;
 	count = 0;
@@ -28,8 +28,6 @@ int	ft_count_if(char **tab, int (*f)(char*))
 	}
 	return (count);
 }
-
-
 /*
 #include <stdio.h>
 int	ft_isalnum(int c);
