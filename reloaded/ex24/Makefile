@@ -6,27 +6,38 @@
 #    By: antandre <antandre@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 15:03:30 by antandre          #+#    #+#              #
-#    Updated: 2024/06/13 11:37:34 by antandre         ###   ########.fr        #
+#    Updated: 2024/06/17 10:01:33 by antandre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
 NAME = libft.a
-SRC = ./srcs/%.c
-HEADER = ./includes/%.h
-FLAGS = -Wall -Wextra -Werror
-OPTION = -c $(HEADER)
-FILES = $(SRC)ft_putchar.c $(SRC)ft_putstr.c $(SRC)ft_strcmp.c $(SRC)ft_strlen.c $(SRC)ft_swap.c
+
+SRCS_DIR = srcs
+INCS_DIR = includes
+
+OBJS = $(SRCS:$(SRCS_DIR)/%.c=%.o)
+
+SRCS = $(shell find $(SRCS_DIR) -type f -name "*.c")
+
+INCS = $(shell find $(INCS_DIR) -type f -name "*.h")
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLAGS) $(OPTION) $(FILES) $(HEADER)
-	ar rc $(NAME) *.o
+%.o: $(SRCS_DIR)/%.c $(INCS)
+	$(CC) $(CFLAGS) -c $< -I$(INCS_DIR) -o $@
+
+$(NAME): $(OBJS)
+	ar rcs $@ $(OBJS)
 
 clean:
-	/bin/rm -f *.o
+	rm -f $(OBJS)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
